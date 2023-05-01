@@ -1,0 +1,18 @@
+{
+  "status": "done",
+  "assets": {
+    "imageswitcher.bundle.js": {
+      "name": "imageswitcher.bundle.js",
+      "path": "/Users/senayberhe/Documents/django_workspace/booktime/main/static/bundles/imageswitcher.bundle.js"
+    },
+    "imageswitcher.bundle.js.LICENSE.txt": {
+      "name": "imageswitcher.bundle.js.LICENSE.txt",
+      "path": "/Users/senayberhe/Documents/django_workspace/booktime/main/static/bundles/imageswitcher.bundle.js.LICENSE.txt"
+    }
+  },
+  "chunks": {
+    "imageswitcher": [
+      "imageswitcher.bundle.js"
+    ]
+  }
+}

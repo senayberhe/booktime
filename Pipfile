@@ -1,0 +1,36 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+psycopg2-binary = "*"
+psycopg2 = "*"
+pipfile = "*"
+pillow = "*"
+weasyprint = "*"
+selenium = "*"
+django-tables2 = "*"
+django-filter = "*"
+django-webpack-loader = "*"
+django-extensions = "*"
+pydotplus = "*"
+ipython = "*"
+werkzeug = "*"
+factory-boy = "*"
+django-debug-toolbar = "*"
+django-widget-tweaks = "*"
+djangorestframework = "*"
+channels = "*"
+channels-redis = "*"
+aioredis = "*"
+aiohttp = "*"
+whitenoise = "*"
+boto3 = "*"
+django-storages = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

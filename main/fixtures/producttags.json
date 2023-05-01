@@ -1,0 +1,56 @@
+[
+    {
+      "model": "main.producttag",
+      "fields": {
+        "name": "Romance",
+        "slug": "romance",
+        "description": "an emotional attraction or aura belonging to an especially heroic era, adventure, or activity",
+        "active": true
+      }
+    },
+    {
+      "model": "main.producttag",
+      "fields": {
+        "name": "Drama",
+        "slug": "drama",
+        "description": "",
+        "active": true
+      }
+    },
+    {
+      "model": "main.producttag",
+      "fields": {
+        "name": "Science Fiction",
+        "slug": "science-fiction",
+        "description": "",
+        "active": true
+      }
+    },
+    {
+      "model": "main.producttag",
+      "fields": {
+        "name": "Teamwork",
+        "slug": "teamwork",
+        "description": "",
+        "active": true
+      }
+    },
+    {
+      "model": "main.producttag",
+      "fields": {
+        "name": "Finance",
+        "slug": "finance",
+        "description": "",
+        "active": true
+      }
+    },
+    {
+      "model": "main.producttag",
+      "fields": {
+        "name": "Opensource",
+        "slug": "opensource",
+        "description": "Collections of book dedicated to opensource",
+        "active": true
+      }
+    }
+]

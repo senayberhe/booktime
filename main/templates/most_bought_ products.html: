@@ -1,0 +1,77 @@
+{% extends "admin/base_site.html" %}
+
+{% block extrahead %}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+{% endblock extrahead %}
+
+{% block content %}
+  <p>
+    <form method="POST">
+      {% csrf_token %}
+      <label for="{{ form.date_from.id_for_label }}">From:</label>
+      {{ form.date_from }}
+      <label for="{{ form.date_to.id_for_label }}">To:</label>
+      {{ form.date_to }}
+      <input type="submit" value="Set period" />
+    </form>
+  </p>
+  {% if labels and values %}
+    <canvas id="myChart" width="900" height="400"></canvas>
+    <script>
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: {{ labels|safe }},
+          datasets: [
+            {
+              label: 'No of purchases',
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1,
+              data: {{ values|safe }}
+            }
+          ]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: 'Purchases by Day'
+            },
+            legend: {
+              display: true,
+              position: 'bottom'
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true
+            },
+            x: {
+              ticks: {
+                callback: function(value) {
+                  return value.charAt(0);
+                }
+              }
+            }
+          }
+        }
+      });
+    </script>
+  {% endif %}
+{% endblock %}
