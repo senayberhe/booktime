@@ -29,6 +29,7 @@ aiohttp = "*"
 whitenoise = "*"
 boto3 = "*"
 django-storages = "*"
+django-environ = "*"
 
 [dev-packages]
 
